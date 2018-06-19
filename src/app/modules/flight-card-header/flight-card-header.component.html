@@ -1,0 +1,17 @@
+<div class="row fcHeader rounded">
+  <div class="col-8 text-left fcHeaderInner">
+    <label for="origin">{{currentSearchCriteria.origin | uppercase}}</label>
+    <label for="separator">></label>
+    <label for="destination">{{currentSearchCriteria.destination | uppercase}}</label>
+    <label *ngIf="!currentSearchCriteria.isOneWay" for="separator">></label>
+    <label *ngIf="!currentSearchCriteria.isOneWay" for="destination">{{currentSearchCriteria.origin | uppercase}}</label>
+  </div>
+  <div class="col-4 fcHeaderInner2">
+    <div>
+      <label for="departurDate">Depart : {{currentSearchCriteria.departureDate | date:'mediumDate'}}</label>
+    </div>
+    <div *ngIf="!currentSearchCriteria.isOneWay">
+      <label for="returnDate">Return : {{currentSearchCriteria.returnDate | date:'mediumDate'}}</label>
+    </div>
+  </div>
+</div>

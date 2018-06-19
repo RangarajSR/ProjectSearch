@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="row">
+      <app-header 
+          class="aheader"
+          header="Flight Search Engine">
+      </app-header>
+  </div>
+  <div class="row">
+      <div class="sidebar col-md-4" >
+          <tabs>
+              <tab tabTitle="One way">
+                  <app-search-input 
+                      (flightSearchInitiated)="onFlightSearchRequested($event)"
+                      [isOneWay]="true">
+                  </app-search-input>
+              </tab>
+              <tab tabTitle="Return">
+                  <app-search-input 
+                      (flightSearchInitiated)="onFlightSearchRequested($event)"
+                      [isOneWay]="false">
+                  </app-search-input>
+              </tab>
+          </tabs>
+      </div>
+      <div class="col-md-8 main-content">
+        <app-flight-card-header *ngIf="flightsearchResult?.length > 0" [currentSearchCriteria]="currentSearchdetails"></app-flight-card-header>
+        <div >
+            <app-flight-card 
+                *ngFor="let item of flightsearchResult;trackBy:trackbyTupleID" 
+                [flightDetails]="item"
+                [isOneWay]="currentSearchdetails.isOneWay"></app-flight-card>  
+            <label>{{statusMessage}}</label>
+        </div> 
+      </div>
+  </div>
+</div>

@@ -1,0 +1,102 @@
+<div>
+    <form [formGroup]="myForm"  
+        (ngSubmit)="onSubmit(myForm.value)"  
+        class="ui form"
+        [class.error]="!myForm.valid && myForm.touched">
+          <div class="col-1-2">
+              <div class="form-control float-left"> 
+                    <input  
+                        placeholder="Origin City" 
+                        type="text" 
+                        appAlphaOnly
+                        formControlName="origin"/>
+                    <div *ngIf="myForm.controls['origin'].errors?.required 
+                            && myForm.controls['origin'].touched"
+                            class="text-danger">[Origin] is required.
+                    </div>
+              </div>
+          </div>
+          <div class="col-1-2">
+                <div class="form-control float-left">
+                    <input  
+                        placeholder="Destination City" 
+                        type="text"
+                        appAlphaOnly
+                        formControlName="destination"/>
+                    <div *ngIf="myForm.controls['destination'].errors?.required 
+                            && myForm.controls['destination'].touched"
+                            class="text-danger">[Destination] is required.
+                    </div>
+                </div>
+            </div>
+            <div class="col-1-2">
+                <div class="form-control float-left">
+                    <dp-date-picker
+                        class="date-picker" 
+                        placeholder="Departure date" 
+                        #dayPicker 
+                        formControlName="departureDate"
+                        disabled
+                        [(ngModel)]="validationMinDate">
+                    </dp-date-picker>
+                </div>
+            </div>
+            <div class="col-1-2" *ngIf="!isOneWay">
+                <div class="form-control float-left" >
+                    <dp-date-picker 
+                        class="date-picker"
+                        placeholder="Return date" 
+                        #returnDayPicker
+                        formControlName="returnDate"
+                        disabled
+                        [minDate]="validationMinDate">
+                    </dp-date-picker>
+                    <div *ngIf="myForm.controls['returnDate'].errors?.minDate"
+                            class="text-danger">Enter date after [Departure date].
+                    </div>
+                </div>
+            </div>
+            <div class="col-1-2">
+                <div class="form-control float-left" >
+                    <select class="pSelect" formControlName="personSelect" >
+                        <option  selected value="">Passengers</option>
+                        <option *ngFor="let select of list" [ngValue]="select">{{ select }}</option>
+                    </select>
+                </div>
+            </div>
+        <div class="col-1-2">
+            <div class="form-control float-left">
+                <button 
+                    class="btn btn-large btn-normal btn-responsive" 
+                    title="Provide search details"
+                    [disabled]="!myForm.valid">Search
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="col-1-2">
+    <div class="form-control float-center">
+        <label for="name">Refine flight search</label>
+        <ion-range-slider 
+            id="rangeSel"
+            #sliderElement
+            type="double"
+            min="0"
+            max="10000"
+            from="0"
+            from_min="0"
+            from_max="10000"
+            from_shadow="true"
+            to="10000"
+            to_min="1000"
+            to_max="10000"
+            to_shadow="true"
+            decorate_both="false" 
+            (onUpdate)="update(flightSearchSlider, $event)"
+            (onChange)="update(flightSearchSlider, $event)"
+            (onFinish)="finish(flightSearchSlider, $event)">
+        </ion-range-slider>
+    </div>
+</div>
+

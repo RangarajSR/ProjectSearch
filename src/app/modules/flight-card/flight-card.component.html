@@ -1,0 +1,47 @@
+<div class="row fcMain rounded border-black">
+    <div class="col fcInner">
+        <div class="grid grid-pad">
+                <div class="col-1-2">
+                    <label for="name">{{flightDetails.fare |  currency:'INR'}}</label>
+                </div>
+                <div class="col-1-2">
+                    <label class="lblbg"  for="name">{{flightDetails.departDetails.flightNum | uppercase}}</label>
+                </div>
+                <div class="col-1-2">
+                    <label class="lblsm" for="ft">{{flightDetails.departDetails.origin | uppercase}} > {{flightDetails.departDetails.destination | uppercase}}</label>
+                </div>
+                <div class="col-1-2">
+                    <label class="lblsm" for="dt">Depart : {{flightDetails.departDetails.departureTime| uppercase}}</label>
+                </div>
+                <div class="col-1-2">
+                    <label class="lblsm" for="at">Arrive : {{flightDetails.departDetails.arrivalTime| uppercase}}</label>
+                </div>
+            </div>
+        </div>
+    <div class="col fcInner" *ngIf="!isOneWay">
+        <div class="grid grid-pad">
+            <div class="col-1-2 lblReturn">
+                <label class="lblbg"  for="name">{{flightDetails.returnDetails.flightNum| uppercase}}</label>
+            </div>
+            <div class="col-1-2">
+                <label class="lblsm" for="ft">{{flightDetails.departDetails.destination | uppercase}} > {{flightDetails.departDetails.origin | uppercase}}</label>
+            </div>
+            <div class="col-1-2">
+                <label class="lblsm" for="dt">Depart : {{flightDetails.returnDetails.departureTime| uppercase}}</label>
+            </div>
+            <div class="col-1-2">
+                <label class="lblsm" for="at">Arrive : {{flightDetails.returnDetails.arrivalTime| uppercase}}</label>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="grid grid-pad float-right">
+            <div class="col-1-2 airlineLogo">
+                <img  class=" rounded" alt="Logo">
+            </div>
+            <div class="col-1-2">
+                <button class="btn btn-large btn-normal" title="flight booking">Book this flight</button>
+            </div>
+        </div>
+    </div>
+</div>

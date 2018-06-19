@@ -1,0 +1,128 @@
+[
+	{
+	  "id": 0,
+	  "fare":"1000",
+	  "flightName": "Goa-Delhi-Goa",
+	  "departDetails":
+					  {
+						"flightNum": "AL202",
+						"origin": "Goa",
+						"destination": "Delhi",
+						"departureTime": "02:30pm",
+						"arrivalTime": "03:30pm",
+						"departureDate": "06/30/2018"
+					  },
+	  "returnDetails":
+					  {
+						"flightNum": "AL203",
+						"departureTime": "4:30pm",
+						"arrivalTime": "09:30pm",
+						"returnDate" : "06/30/2018"
+					  } 
+	},
+	{
+	  "id": 1,
+	  "fare":"1000",
+	  "flightName": "Bangalore-SriNagar-Bangalore",
+	  "departDetails":
+					  {
+						"flightNum": "AL204",
+						"origin": "Bangalore",
+						"destination": "SriNagar",
+						"departureTime": "02:30pm",
+						"arrivalTime": "03:30pm",
+						"departureDate": "06/30/2018"
+					  },
+	  "returnDetails":
+					  {
+						"flightNum": "AL205",
+						"departureTime": "01:30pm",
+						"arrivalTime": "03:30pm",
+						"returnDate" : "12/30/2018"
+					  } 
+	},
+	{
+	  "id": 2,
+	  "fare":"1000",
+	  "flightName": "Mumbai-Delhi-Mumbai",
+	  "departDetails":
+					  {
+						"flightNum": "AL206",
+						"origin": "Mumbai",
+						"destination": "Delhi",
+						"departureTime": "02:30pm",
+						"arrivalTime": "03:30pm",
+						"departureDate": "06/30/2018"
+					  },
+	  "returnDetails":
+					  {
+						"flightNum": "AL207",
+						"departureTime": "02:30pm",
+						"arrivalTime": "04:30pm",
+						"returnDate" : "08/30/2018"
+					  } 
+	},
+	{
+	  "id": 3,
+	  "fare":"1000",
+	  "flightName": "Chennai-Bangalore-Chennai",
+	  "departDetails":
+					  {
+						"flightNum": "AL208",
+						"origin": "Chennai",
+						"destination": "Bangalore",
+						"departureTime": "02:30pm",
+						"arrivalTime": "03:30pm",
+						"departureDate": "06/30/2018"
+					  },
+	  "returnDetails":
+					  {
+						"flightNum": "AL209",
+						"departureTime": "05:30pm",
+						"arrivalTime": "08:30pm",
+						"returnDate" : "12/30/2018"
+					  } 
+	},
+	{
+	  "id": 4,
+	  "fare":"1500",
+	  "flightName": "Goa-Bangalore-Goa",
+	  "departDetails":
+					  {
+						"flightNum": "AL210",
+						"origin": "Goa",
+						"destination": "Bangalore",
+						"departureTime": "02:30pm",
+						"arrivalTime": "03:30pm",
+						"departureDate": "06/30/2018"
+					  },
+	  "returnDetails":
+					  {
+						"flightNum": "AL211",
+						"departureTime": "05:30pm",
+						"arrivalTime": "06:30pm",
+						"returnDate" : "06/30/2018"
+					  } 
+	},
+	{
+	  "id": 5,
+	  "fare":"1400",
+	  "flightName": "Bangalore-Pune-Bangalore",
+	  "departDetails":
+					  {
+						"flightNum": "AL212",
+						"origin": "Bangalore",
+						"destination": "Pune",
+						"departureTime": "02:30pm",
+						"arrivalTime": "03:30pm",
+						"departureDate": "06/30/2018"
+					  },
+	  "returnDetails":
+					  {
+						"flightNum": "AL213",
+						"departureTime": "09:30pm",
+						"arrivalTime": "11:30pm",
+						"returnDate" : "08/30/2018"
+					  } 
+	}
+  ]

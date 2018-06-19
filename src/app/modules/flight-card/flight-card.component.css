@@ -1,0 +1,31 @@
+
+.border-black{
+    border: 1px solid black;
+}
+.fcMain{
+    height:auto;
+    margin-top: 10px;
+    margin-left: 1px;
+    margin-right: 1px; 
+}
+.fcInner{
+  font-size:1.5em;
+  float: left;
+}
+.lblsm{
+    font-size:0.6em;
+    float: left;
+    width: 100%;
+}
+.lblbg{
+    font-size:0.8em;
+    float: left; 
+    width: 100%;
+}
+.airlineLogo{
+    width: 130px;
+    height:130px;
+}
+.lblReturn{
+    margin-top: 45px;
+}
